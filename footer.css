@@ -6,3 +6,37 @@ footer {
 	box-sizing: border-box
 }
 								
+								
+section:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+article {
+		float: left;
+		padding: 20px;
+		width: 70%;
+		background-color: #f1f1f1;
+		height: 300px; /* only for demonstration, should be removed */
+		box-sizing: border-box
+	}
+nav {
+	float: left;
+	width: 30%;
+	height: 300px; /* only for demonstration, should be removed */
+	background: #ccc;
+	padding: 20px;
+	box-sizing: border-box
+}
+
+		/* Style the header */
+header {
+	background-color: #666;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	box-sizing: border-box
+}
+		
