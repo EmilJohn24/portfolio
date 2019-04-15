@@ -28,6 +28,15 @@ nav {
 	box-sizing: border-box
 }
 
+nav ul li{
+	list-style-type: square !important;
+	
+}
+nav ul li:hover{
+	padding: 5px;
+	background-color: white;
+	font-weight: 30;
+}
 		/* Style the header */
 header {
 	background-color: #666;
