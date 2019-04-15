@@ -42,6 +42,46 @@
 			<article>
 				<h3>About Me</h3>
 				<p>Say Something</p>
+				<pre><code>
+		main():
+			1. Load welcome page
+			2. Set up screen by changing its size to what's specified for the playing field
+			3. Load player with atomic weight 4 and atomic number 2 with a blue color
+			4. Set up array for enemy atoms (otherAtoms)
+			5. Set player velocity in x and y directions to 0
+			6. Display player data
+			7. Watch for a WASD key press and set the velocities accordingly.
+			8. Set the player's velocity to the new velocities from Step 7
+			9. [Do emitter() on player] Check if the player is unstable and store the emitted particle from decay if yes
+			10. If the player is not stable, place the emitted particle into the array for enemy atoms (see Step 4)
+			11. Move the player by his current velocity (per frame)
+			12. Do the groupVelocityUpdate() algorithm on all enemy atoms then execute Steps 9 - 11 for all of them
+			13. Add 1 to frames
+			14. If the player is defeated (atomic number = 0 and atomic weight = 0), play the game over sequence
+			15. if the player has an atomic number greater than 118, play the victory sequence
+			16. If the condition in 14 and 15 are not true, return to Step 6
+
+		//Other important algorithms:
+
+		groupUpdateVelocity():
+			//this is done on all atoms
+			1. Generate a random number between 0 - 3
+			2. Do Step 3 if the number from Step 1 is not 0
+			3. Have the current atom do a random walk for this frame, skip Step 4
+			4. Have the current atom locate the player and go toward him in either the x or y direction
+			5. Go to the next atom and repeat
+
+		advancedCollisionCheck():
+			//advanced here means a collision is checked for before it actually occurs
+			1. Get the dimension of the atom (the smallest square all its particles can fit in)
+			2. Check if there are particles (neutrons, protons, electrons, positrons) in front of the direction the atom is moving in
+			3. If there is, track the top-left part of the atom (using getCollidedObjectFoundIn) and return this as 
+				the coordinate of the object the atom collided with
+
+
+
+				
+				</code></pre>
 			</article>
 
 			
